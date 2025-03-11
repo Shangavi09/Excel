@@ -1,0 +1,137 @@
+1. How do you return a value 2 rows below and 1 column to the right of cell A1?
+
+formula=OFFSET(A28,2,1,1,1)
+
+output
+
+1	6		8
+2	7		
+3	8		
+4	9		
+5	10		
+
+
+2. How can you get a range of 3 rows and 2 columns starting from B2?
+
+formula==OFFSET(A28,3,0,2,2)
+
+output
+
+1	6		4	9
+2	7		5	10
+3	8			
+4	9			
+5	10			
+
+3. How do you dynamically get the last row in column A if data length changes?
+
+formula=OFFSET(A28,4,0,1,1)
+
+1	6		
+2	7		
+3	8		
+4	9		5
+5	10		
+
+
+4. How do you sum the last 5 values in column B dynamically?
+
+formula=SUM(OFFSET(B36,COUNT(B36:B45)-5,0,5))
+
+outout
+
+1	11		90
+2	12		
+3	13		
+4	14		
+5	15		
+6	16		
+7	17		
+8	18		
+9	19		
+10	20		
+
+
+
+
+
+
+
+
+
+
+6.How do you sum the range A1:A10?
+
+Formula =SUM(A2:A10)
+
+output
+100
+52
+4252
+42142
+47528
+41
+456
+69
+7893
+=102533
+
+7. How do you sum values in B1:B10 only if they are greater than 50?
+
+Formula =SUMIF(B1:B10,">50",B1:B10)
+
+output
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+=400
+
+8.How do you sum values in column C if column A contains "Apple"?
+
+Formula ==SUMPRODUCT(B15,C15)
+
+product	Amount	Qty	
+Apple	500	5	2500
+
+MATCH is an Excel function used to locate the position of a lookup value in a row, column, or table.
+
+9. How do you find the position of value 50 in range D1:D10?
+
+Formula =MATCH(D5,D1:D11,0)
+
+output
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+=5
+
+10. How do you find the position of the largest number in column E?
+
+Formula=MATCH(MAX(E1:E10),E1:E10,0)
+
+output
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+=10
